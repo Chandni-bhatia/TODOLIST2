@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <title>TODOLIST</title>
+    <style>
+      body {
+        background: url("pexels-anna-shvets-5682518.jpg"), fixed;
+      }
+      @keyframes ani {
+        from {
+          height: 700px;
+          padding: 0 0px;
+        }
+        to {
+          height: 50px;
+          padding: 10px 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TODOLIST</a>
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <h2 class="text-center" style="animation: ani 3s">TODOs List</h2>
+      <div class="form-group">
+        <label for="Title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          aria-describedby="emailHelp"
+          placeholder="What's the title?"
+        />
+        <div id="emailHelp" class="form-text text-muted">
+          tell us the title.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          rows="3"
+          placeholder="yes! tell me briefly what you wanna say !!"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark" id="Add">Add to list</button>
+
+      <h2 class="text-center" class="my-4">List items</h2>
+      <button
+        class="btn btn-dark"
+        onclick="clearr()"
+        style="margin-left: 1200px"
+      >
+        Clear
+      </button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">SNo</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="Listbody">
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="btn btn-dark"></button>
+              <button class="btn btn-dark" id="no"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index1.js"></script>
+  </body>
+</html>
